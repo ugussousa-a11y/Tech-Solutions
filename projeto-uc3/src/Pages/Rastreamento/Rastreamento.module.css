@@ -1,0 +1,838 @@
+/* Rastreamento.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap');
+
+/* ─── Variáveis ───────────────────────────────────────────── */
+:root {
+  --cor-fundo: #f0f4f8;
+  --cor-branco: #ffffff;
+  --cor-primaria: #1d4ed8;
+  --cor-primaria-hover: #1e40af;
+  --cor-primaria-leve: #eff6ff;
+  --cor-texto: #0f172a;
+  --cor-texto-secundario: #475569;
+  --cor-placeholder: #94a3b8;
+  --cor-borda: #e2e8f0;
+  --cor-borda-foco: #2563eb;
+  --cor-nav-fundo: #ffffff;
+  --cor-rodape: #0f172a;
+  --cor-sucesso: #16a34a;
+  --cor-erro: #dc2626;
+  --raio: 12px;
+  --raio-grande: 16px;
+  --sombra: 0 2px 16px rgba(15, 23, 42, 0.08);
+  --sombra-card: 0 4px 32px rgba(15, 23, 42, 0.12);
+  --transicao: 0.22s ease;
+}
+
+/* ─── Reset básico ────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ─── Página inteira ──────────────────────────────────────── */
+.pagina {
+  min-height: 100vh;
+  background-color: var(--cor-fundo);
+  font-family: 'DM Sans', sans-serif;
+  color: var(--cor-texto);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Navbar ──────────────────────────────────────────────── */
+/* .navbar {
+  background: var(--cor-nav-fundo);
+  border-bottom: 1px solid var(--cor-borda);
+  padding: 0 40px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 8px rgba(15, 23, 42, 0.06);
+}
+
+.logoNav {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--cor-primaria);
+  text-decoration: none;
+}
+
+.linksNav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.linkNav {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--cor-texto-secundario);
+  text-decoration: none;
+  transition: color var(--transicao);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.linkNav:hover {
+  color: var(--cor-texto);
+}
+
+.linkNavAtivo {
+  color: var(--cor-primaria);
+  font-weight: 600;
+  border-bottom: 2px solid var(--cor-primaria);
+  padding-bottom: 2px;
+}
+
+.botaoLoginNav {
+  background: var(--cor-primaria);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: background var(--transicao), transform 0.1s ease;
+}
+
+.botaoLoginNav:hover {
+  background: var(--cor-primaria-hover);
+}
+
+.botaoLoginNav:active {
+  transform: scale(0.97);
+} */
+
+/* ─── Hero / Busca ────────────────────────────────────────── */
+.secaoBusca {
+  background: var(--cor-branco);
+  padding: 72px 24px 64px;
+  text-align: center;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.tituloPrincipal {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: var(--cor-texto);
+  margin: 0 0 12px 0;
+  letter-spacing: -0.5px;
+  animation: descerFadeIn 0.5s ease both;
+}
+
+.subtituloBusca {
+  font-size: 1rem;
+  color: var(--cor-texto-secundario);
+  margin: 0 0 40px 0;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  animation: descerFadeIn 0.5s 0.1s ease both;
+}
+
+.formularioBusca {
+  display: flex;
+  align-items: center;
+  max-width: 540px;
+  margin: 0 auto;
+  background: var(--cor-branco);
+  border: 1.5px solid var(--cor-borda);
+  border-radius: 10px;
+  padding: 6px 6px 6px 16px;
+  box-shadow: var(--sombra);
+  transition: border-color var(--transicao), box-shadow var(--transicao);
+  animation: descerFadeIn 0.5s 0.2s ease both;
+}
+
+.formularioBusca:focus-within {
+  border-color: var(--cor-borda-foco);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.iconeSearch {
+  color: var(--cor-placeholder);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.iconeSearch svg { width: 18px; height: 18px; }
+
+.inputBusca {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--cor-texto);
+  background: transparent;
+  padding: 8px 0;
+}
+
+.inputBusca::placeholder { color: var(--cor-placeholder); }
+
+.botaoBuscar {
+  background: var(--cor-primaria);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 11px 22px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background var(--transicao), transform 0.1s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.botaoBuscar:hover:not(:disabled) { background: var(--cor-primaria-hover); }
+.botaoBuscar:active:not(:disabled) { transform: scale(0.97); }
+.botaoBuscar:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Sugestões rápidas */
+.sugestoesBusca {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  animation: descerFadeIn 0.5s 0.3s ease both;
+}
+
+.textoSugestao {
+  font-size: 0.8rem;
+  color: var(--cor-placeholder);
+}
+
+.tagSugestao {
+  background: var(--cor-primaria-leve);
+  color: var(--cor-primaria);
+  border: none;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: background var(--transicao);
+}
+
+.tagSugestao:hover { background: #dbeafe; }
+
+/* Mensagem de erro geral */
+.mensagemErro {
+  max-width: 540px;
+  margin: 16px auto 0;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.875rem;
+  color: var(--cor-erro);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: entrar 0.25s ease;
+}
+
+.mensagemErro svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+/* ─── Seção de resultados ─────────────────────────────────── */
+.secaoResultados {
+  flex: 1;
+  padding: 48px 40px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.gradeResultados {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* ─── Card lateral esquerdo (status) ──────────────────────── */
+.cardStatus {
+  background: var(--cor-branco);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-grande);
+  padding: 28px 24px;
+  box-shadow: var(--sombra);
+  animation: entrar 0.4s ease both;
+}
+
+.rotuloStatusAtual {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--cor-texto-secundario);
+  margin: 0 0 10px 0;
+}
+
+.linhaStatusTopo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.textoStatusPrincipal {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--cor-primaria);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.badgeNumeroOS {
+  background: var(--cor-primaria-leve);
+  color: var(--cor-primaria);
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+  border-radius: 8px;
+  padding: 6px 12px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Itens de info (técnico, data...) */
+.listaInfoStatus {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.itemInfoStatus {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  animation: entrar 0.4s ease both;
+}
+
+.iconeInfoStatus {
+  width: 36px;
+  height: 36px;
+  background: var(--cor-primaria-leve);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--cor-primaria);
+}
+
+.iconeInfoStatus svg { width: 17px; height: 17px; }
+
+.rotuloInfo {
+  font-size: 0.75rem;
+  color: var(--cor-texto-secundario);
+  margin: 0 0 2px 0;
+}
+
+.valorInfo {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--cor-texto);
+  margin: 0;
+}
+
+/* Caixa de observação */
+.caixaObservacao {
+  background: var(--cor-primaria-leve);
+  border-left: 3px solid var(--cor-primaria);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 16px;
+  font-size: 0.875rem;
+  color: var(--cor-texto-secundario);
+  font-style: italic;
+  line-height: 1.5;
+  animation: entrar 0.5s 0.2s ease both;
+}
+
+/* ─── Card direito (progresso + dispositivo) ──────────────── */
+.colunaProgresso {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: entrar 0.4s 0.1s ease both;
+}
+
+.cardProgresso {
+  background: var(--cor-branco);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-grande);
+  padding: 28px 32px;
+  box-shadow: var(--sombra);
+}
+
+.tituloCardProgresso {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--cor-texto);
+  margin: 0 0 32px 0;
+}
+
+/* Barra de progresso com etapas */
+.barraEtapas {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+/* Linha conectora de fundo */
+.barraEtapas::before {
+  content: '';
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  right: 22px;
+  height: 3px;
+  background: var(--cor-borda);
+  z-index: 0;
+  border-radius: 2px;
+}
+
+/* Linha de progresso preenchida */
+.linhaProgresso {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  height: 3px;
+  background: var(--cor-primaria);
+  z-index: 1;
+  border-radius: 2px;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.etapa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  z-index: 2;
+  flex: 1;
+}
+
+.circuloEtapa {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2.5px solid var(--cor-borda);
+  background: var(--cor-branco);
+  transition: border-color var(--transicao), background var(--transicao), box-shadow var(--transicao);
+}
+
+.circuloEtapa svg { width: 20px; height: 20px; }
+
+.etapaAtiva .circuloEtapa {
+  border-color: var(--cor-primaria);
+  background: var(--cor-primaria);
+  color: #fff;
+  box-shadow: 0 0 0 5px rgba(29, 78, 216, 0.15);
+  animation: pulsarAtivo 2s ease infinite;
+}
+
+.etapaConcluida .circuloEtapa {
+  border-color: var(--cor-primaria);
+  background: var(--cor-primaria);
+  color: #fff;
+}
+
+.etapaPendente .circuloEtapa {
+  color: var(--cor-placeholder);
+}
+
+.nomeEtapa {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--cor-texto-secundario);
+}
+
+.etapaAtiva .nomeEtapa,
+.etapaConcluida .nomeEtapa {
+  color: var(--cor-primaria);
+}
+
+@keyframes pulsarAtivo {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.15); }
+  50%       { box-shadow: 0 0 0 8px rgba(29, 78, 216, 0.08); }
+}
+
+/* ─── Linha inferior: dispositivo + detalhes ──────────────── */
+.gradeDispositivoDetalhes {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 20px;
+}
+
+/* Card dispositivo (azul) */
+.cardDispositivo {
+  border-radius: var(--raio-grande);
+  padding: 28px 24px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 200px;
+}
+
+.fundoDispositivo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.fundoDispositivo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+}
+
+.conteudoDispositivo {
+  position: relative;
+  z-index: 1;
+}
+
+.rotuloDispositivo {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+  margin: 0 0 6px 0;
+}
+
+.nomeDispositivo {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 10px 0;
+  line-height: 1.2;
+}
+
+.descricaoServico {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.8);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Ícone decorativo do dispositivo */
+.iconeDecorativoDispositivo {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  opacity: 0.12;
+  z-index: 1;
+}
+
+.iconeDecorativoDispositivo svg {
+  width: 80px;
+  height: 80px;
+  color: #fff;
+}
+
+/* Card de detalhes */
+.cardDetalhes {
+  background: var(--cor-branco);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-grande);
+  padding: 24px;
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.itemDetalhe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.itemDetalhe:last-of-type {
+  border-bottom: none;
+}
+
+.rotuloDetalhe {
+  font-size: 0.875rem;
+  color: var(--cor-texto-secundario);
+}
+
+.valorDetalhe {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--cor-texto);
+}
+
+.valorDetalheDestaque {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.botaoFalarTecnico {
+  width: 100%;
+  background: transparent;
+  border: 1.5px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--cor-texto);
+  cursor: pointer;
+  margin-top: 18px;
+  transition: border-color var(--transicao), background var(--transicao), color var(--transicao);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.botaoFalarTecnico:hover {
+  border-color: var(--cor-primaria);
+  background: var(--cor-primaria-leve);
+  color: var(--cor-primaria);
+}
+
+.botaoFalarTecnico svg { width: 16px; height: 16px; }
+
+/* ─── Estado vazio (tela inicial) ─────────────────────────── */
+.estadoInicial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 24px;
+  text-align: center;
+  gap: 16px;
+  flex: 1;
+  animation: entrar 0.4s ease;
+}
+
+.iconeEstadoInicial {
+  width: 72px;
+  height: 72px;
+  background: var(--cor-primaria-leve);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cor-primaria);
+}
+
+.iconeEstadoInicial svg { width: 36px; height: 36px; }
+
+.tituloEstadoInicial {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--cor-texto);
+  margin: 0;
+}
+
+.textoEstadoInicial {
+  font-size: 0.9rem;
+  color: var(--cor-texto-secundario);
+  margin: 0;
+  max-width: 340px;
+  line-height: 1.6;
+}
+
+/* ─── Spinner ─────────────────────────────────────────────── */
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: girar 0.6s linear infinite;
+}
+
+@keyframes girar { to { transform: rotate(360deg); } }
+
+/* ─── Rodapé ──────────────────────────────────────────────── */
+/* .rodape {
+  background: var(--cor-rodape);
+  color: #94a3b8;
+  padding: 48px 40px 32px;
+}
+
+.conteudoRodape {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.logoRodape {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--cor-primaria);
+  margin: 0 0 10px 0;
+}
+
+.textoRodape {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.tituloColRodape {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #64748b;
+  margin: 0 0 16px 0;
+}
+
+.linkRodape {
+  display: block;
+  font-size: 0.875rem;
+  color: #94a3b8;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: color var(--transicao);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: 'DM Sans', sans-serif;
+  text-align: left;
+}
+
+.linkRodape:hover { color: #fff; } */
+
+/* ─── Animações ───────────────────────────────────────────── */
+@keyframes entrar {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes descerFadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Responsividade ──────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .gradeResultados {
+    grid-template-columns: 1fr;
+  }
+
+  .gradeDispositivoDetalhes {
+    grid-template-columns: 1fr;
+  }
+
+  .conteudoRodape {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .linksNavDesktop {
+    display: none;
+  }
+
+  .secaoBusca {
+    padding: 48px 20px 40px;
+  }
+
+  .secaoResultados {
+    padding: 32px 20px;
+  }
+
+  .cardProgresso {
+    padding: 24px 20px;
+  }
+
+  .barraEtapas::before {
+    left: 18px;
+    right: 18px;
+  }
+
+  .conteudoRodape {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .rodape {
+    padding: 40px 20px 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .formularioBusca {
+    flex-direction: column;
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .botaoBuscar {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .iconeSearch {
+    display: none;
+  }
+
+  .cardStatus {
+    padding: 22px 18px;
+  }
+
+  .nomeEtapa {
+    font-size: 0.7rem;
+  }
+
+  .circuloEtapa {
+    width: 36px;
+    height: 36px;
+  }
+
+  .circuloEtapa svg {
+    width: 16px;
+    height: 16px;
+  }
+}

@@ -1,0 +1,108 @@
+.navbar {
+  background: var(--cor-nav-fundo);
+  border-bottom: 1px solid var(--cor-borda);
+  padding: 0 40px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 8px rgba(15, 23, 42, 0.06);
+  animation: entrarNavbar 0.5s ease-out;
+}
+
+@keyframes entrarNavbar {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logoNav {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--cor-primaria);
+  text-decoration: none;
+}
+
+.linksNav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.linkNav {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--cor-texto-secundario);
+  text-decoration: none;
+  transition: color var(--transicao), transform 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: 'DM Sans', sans-serif;
+  animation: entrarLink 0.5s ease-out;
+}
+
+@keyframes entrarLink {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.linkNav:hover {
+  color: var(--cor-texto);
+}
+
+.linkNavAtivo {
+  color: var(--cor-primaria);
+  font-weight: 600;
+  border-bottom: 2px solid var(--cor-primaria);
+  padding-bottom: 2px;
+}
+
+.botaoLoginNav {
+  background: var(--cor-primaria);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: background var(--transicao), transform 0.1s ease;
+  animation: entrarBotao 0.5s ease-out;
+}
+
+@keyframes entrarBotao {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.botaoLoginNav:hover {
+  background: var(--cor-primaria-hover);
+}
+
+.botaoLoginNav:active {
+  transform: scale(0.97);
+}

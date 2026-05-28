@@ -1,0 +1,53 @@
+.rodape {
+  background: var(--cor-rodape);
+  color: #94a3b8;
+  padding: 48px 40px 32px;
+}
+
+.conteudoRodape {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.logoRodape {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--cor-primaria);
+  margin: 0 0 10px 0;
+}
+
+.textoRodape {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.tituloColRodape {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #64748b;
+  margin: 0 0 16px 0;
+}
+
+.linkRodape {
+  display: block;
+  font-size: 0.875rem;
+  color: #94a3b8;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: color var(--transicao);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: 'DM Sans', sans-serif;
+  text-align: left;
+}
+
+.linkRodape:hover { color: #fff; }
