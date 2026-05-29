@@ -11,14 +11,12 @@ function App() {
   return (
     <>
       <Navbar />
-      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Logincadastro />} />
         <Route path="/servicos" element={<Servicos />} />
         <Route path="/rastreamento" element={<Rastreamento />} />
       </Routes>
-      
       <Footer />
     </>
   )
