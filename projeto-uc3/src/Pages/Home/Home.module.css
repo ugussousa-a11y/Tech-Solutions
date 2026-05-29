@@ -418,7 +418,7 @@
 }
 
 /* Why us */
-.whyUs {}
+
 
 .whyUsTag {
   color: var(--blue);
@@ -481,7 +481,6 @@
   text-align: center;
 }
 
-.statItem {}
 
 .statNumber {
   font-size: clamp(2rem, 4vw, 3rem);
